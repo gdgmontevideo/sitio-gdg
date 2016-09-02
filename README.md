@@ -2,10 +2,11 @@
 
 ## Notas
 
-[Polycasts StarterKit]
-[Polycasts Polymer-CLI]
+[Polycasts StarterKit](https://youtu.be/HgJ0XCyBwzY)
+[Polycasts Polymer-CLI](https://youtu.be/pj2lmXVa84U)
 [Twitter API](https://dev.twitter.com/rest/reference/get/statuses/user_timeline)
 [Meetup API](https://secure.meetup.com/meetup_api/console/?path=/:urlname/events)
+[Logo Generator](http://gdg-logo-generator.appspot.com/)
 
 # Polymer App Toolbox - Starter Kit
 
