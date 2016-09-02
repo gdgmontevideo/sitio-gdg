@@ -1,3 +1,12 @@
+# GDG MVD
+
+## Notas
+
+[Polycasts StarterKit]
+[Polycasts Polymer-CLI]
+[Twitter API](https://dev.twitter.com/rest/reference/get/statuses/user_timeline)
+[Meetup API](https://secure.meetup.com/meetup_api/console/?path=/:urlname/events)
+
 # Polymer App Toolbox - Starter Kit
 
 [![Build Status](https://travis-ci.org/PolymerElements/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/PolymerElements/polymer-starter-kit)
