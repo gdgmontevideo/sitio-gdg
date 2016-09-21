@@ -22,6 +22,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="tw-element.html">
+<link rel="import" href="mp-element.html">
+
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -92,18 +95,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>-->
       <div class="app-grid">
         <div class="item" style="background-color:blue">1</div>
-        <div class="item" style="background-color:red" >1</div>
+        <div class="item" style="background-color:red" >
+          <tw-element></tw-element>
+        </div>
         
-        
-        
-        
-        <div class="item" style="background-color:green" >2</div>
+        <div class="item" style="background-color:green" >
+          <mp-element></mp-element>
+        </div>
         <div class="item" style="background-color:yellow">3</div>
       </div>
 
       </div>
+      
     </app-header-layout>
-    
+    <footer style="position:fixed;bottom:0">
+      &copy; GDG Montevideo. Todos los derechos reservados. | Made with &#9829; and Polymer.
+    </footer>
     
     
     <!--<app-location route="{{route}}"></app-location>

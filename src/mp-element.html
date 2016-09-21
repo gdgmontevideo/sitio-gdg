@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/iron-jsonp-library/iron-jsonp-library.html">
+<dom-module id="mp-element">
+  <template>
+    <p> Meetups - Eventos</p>
+     
+      <iron-jsonp-library
+        library-url="https://api.meetup.com/houston-js/events?callback=%%callback%%"
+        notify-event="api-load"
+        library-loaded="{{loaded}}"
+        ></iron-jsonp-library>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'mp-element',
+      _celeste: function(data){
+        console.log(data);
+      },
+      listeners: {
+        'api-load': 'regularTap',
+      },
+
+      regularTap: function(data) {
+        console.log(data);
+      },
+      // api-load: function(ev) { 
+      //   console.log(ev);
+      // },
+    });
+  </script>
+</dom-module>
