@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/iron-jsonp-library/iron-jsonp-library.html">
-
 <dom-module id="tw-element">
+
+ 
   <template>
     <!--<style include="shared-styles">
       :host {
@@ -9,12 +10,17 @@
         padding: 10px;
       }
     </style>-->
+
     <p> this is tw element</p>
+
+    <p id="content1"> need to parse response from timeline workaround</p>
   </template>
 
   <script>
     Polymer({
       is: 'tw-element'
     });
+    //the key to twitter 
+    //https://syndication.twitter.com/timeline/profile?dnt=false&screen_name=gdgmontevideo&suppress_response_codes=true&lang=en&rnd=2
   </script>
 </dom-module>
