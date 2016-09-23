@@ -1,5 +1,10 @@
 # GDG MVD
 
+config notes:
+gsutil acl ch -r 
+gcloud auth login
+gcloud config set project home-site-alemag
+
 ## Notas
 
 [Polycasts StarterKit](https://youtu.be/HgJ0XCyBwzY)

@@ -2,7 +2,10 @@
 <dom-module id="mp-element">
   <template>
     <p> Meetups - Eventos</p>
-     
+      <template is="dom-repeat" items="{{eventos}}">
+        <h2>{{item.name}}</h2>
+
+      </template>
       <iron-jsonp-library
         library-url="https://api.meetup.com/houston-js/events?callback=%%callback%%"
         notify-event="api-load"
@@ -13,6 +16,9 @@
   <script>
     Polymer({
       is: 'mp-element',
+      // properties: {
+      //   eventos: Array
+      // },
       _celeste: function(data){
         console.log(data);
       },
@@ -21,7 +27,10 @@
       },
 
       regularTap: function(data) {
-        console.log(data);
+        //console.log(data.detail[0].data);
+        this.eventos = data.detail[0].data;
+
+        console.log(this.eventos);
       },
       // api-load: function(ev) { 
       //   console.log(ev);
