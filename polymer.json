@@ -5,6 +5,7 @@
     "src/mp-element.html",
     "src/suscribe-element.html",
     "src/tw-element.html",
+    "src/team-element.html",
     "src/my-view404.html"
   ],
   "sourceGlobs": [

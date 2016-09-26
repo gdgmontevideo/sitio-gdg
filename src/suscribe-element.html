@@ -9,25 +9,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <!--<link rel="import" href="shared-styles.html">-->
 
 <dom-module id="suscribe-element">
   <template>
-    <!--<style include="shared-styles">
+    <style>
+      :root {
+        /* Label and underline color when the input is not focused */
+        --paper-input-container-color: white;
+        --paper-input-container-input-color: white;
+        --paper-input-container-invalid-color: #00bcd4;
+        --paper-input-container-focus-color: #00bcd4;
+      }
       :host {
         display: block;
-
         padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        width:100%;
+         text-align: center;
       }
-    </style>-->
 
-    <!--<div class="card">
-      <div class="circle">3</div>-->
-      <h1>Subscriton Section</h1>
-      <input type="email">
-      <input type="button" value="suscribime!">
+      h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+        letter-spacing: -0.025em;
+        font-weight: 300;
+        margin: 0 0 1em 0;
+      }
+
+      h3 {
+        font-size: 1.25em;
+        margin-top: -1em;
+        line-height: 1.75em;
+        font-weight: 100;
+        margin: 0 0 1.5em 0;
+      }
+
+      .input-div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        display: block;
+        text-align: initial;
+      }
+
+    </style>
+    <div>
+      <h1>Suscribite a nuestro newsletter</h1>
+      <h3> Mantenete al tanto de todas las actividades y novedades del GDG.</h3>
       
-    <!--</div>-->
+      <div class="input-div">
+        <paper-input name="name" label="Nombre" required></paper-input> <br>
+        <paper-input name="email" label="Email" required></paper-input> <br>
+      </div>
+      
+      <paper-button raised onclick="_submit(event)">Suscribime!</paper-button>
+      
+    </div>
   </template>
 
   <script>

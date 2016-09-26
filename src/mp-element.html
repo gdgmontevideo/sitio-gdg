@@ -1,16 +1,34 @@
 <link rel="import" href="../bower_components/iron-jsonp-library/iron-jsonp-library.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <dom-module id="mp-element">
   <template>
-    <p> Meetups - Eventos</p>
-      <template is="dom-repeat" items="{{eventos}}">
+    <style>
+      paper-card {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <!--<p> Meetups - Eventos</p>-->
+      <!--<template is="dom-repeat" items="{{eventos}}">
         <h2>{{item.name}}</h2>
 
-      </template>
+      </template>-->
       <iron-jsonp-library
         library-url="https://api.meetup.com/houston-js/events?callback=%%callback%%"
         notify-event="api-load"
-        library-loaded="{{loaded}}"
-        ></iron-jsonp-library>
+        library-loaded="{{loaded}}">
+      </iron-jsonp-library>
+      
+      <paper-card heading="[[eventos.name]]" image="" elevation="1" animated-shadow="false">
+        <div class="card-content">
+          
+        </div>
+        <div class="card-actions">
+          
+        </div>
+      </paper-card>
+      
   </template>
 
   <script>
@@ -28,8 +46,8 @@
 
       regularTap: function(data) {
         //console.log(data.detail[0].data);
-        this.eventos = data.detail[0].data;
-
+        this.eventos = data.detail[0].data[0];
+        
         console.log(this.eventos);
       },
       // api-load: function(ev) { 

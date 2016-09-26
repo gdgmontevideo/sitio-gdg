@@ -1,19 +1,32 @@
 <link rel="import" href="../bower_components/iron-jsonp-library/iron-jsonp-library.html">
-<dom-module id="tw-element">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 
+<dom-module id="tw-element">
  
   <template>
-    <!--<style include="shared-styles">
-      :host {
+    <style>
+      /*:host {
         display: block;
-
-        padding: 10px;
+      }*/
+      paper-card {
+        width: 100%;
+        height: 100%;
       }
-    </style>-->
+    </style>
 
-    <p> this is tw element</p>
+    <paper-card heading="Utlimos Tweets" image="" elevation="1" animated-shadow="false">
+      <div class="card-content">
+        <p> this is tw element</p>
+        <p id="content1"> need to parse response from timeline workaround</p>    
+      </div>
+      <div class="card-actions">
+        
+      </div>
+    </paper-card>
 
-    <p id="content1"> need to parse response from timeline workaround</p>
+    
+
+    
   </template>
 
   <script>
